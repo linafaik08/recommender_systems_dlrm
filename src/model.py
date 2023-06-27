@@ -156,16 +156,16 @@ class DLRMCustom:
                 pbar.set_postfix({
                     'epoch': epoch + 1,
                     'loss_train': round(losses_train, 4),
-                    'losses_val': round(losses_val, 4),
+                    'losses_test': round(losses_val, 4),
                     'auc_train': round(auc_train, 4),
-                    'auc_val': round(auc_val, 4)
+                    'auc_test': round(auc_val, 4)
                 })
 
                 scores[epoch] = {
                     'loss_train': losses_train,
-                    'loss_val': losses_val,
+                    'loss_test': losses_val,
                     'auc_train': round(auc_train, 4),
-                    'auc_val': round(auc_val, 4)
+                    'auc_test': round(auc_val, 4)
                 }
                 if epoch > 0 and abs(scores[epoch]['auc_val'] - scores[epoch - 1]['auc_val']) < 0.001:
                     k += 1
