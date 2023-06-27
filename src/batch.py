@@ -53,6 +53,7 @@ class RecBatch:
         sample = self.data.iloc[self.index[i]].copy().reset_index(drop=True)
 
         values = sample[self.cols_sparse].sum(axis=0).sum(axis=0)
+        print("values", values)
         values = torch.tensor([k for k in values if k != '']).to(self.device)
 
         lengths = torch.tensor(
@@ -65,6 +66,7 @@ class RecBatch:
         labels = torch.tensor(sample[self.col_label].values, dtype=torch.int32).to(self.device)
 
         return values, lengths, dense_features, labels
+
 def build_batch(batched_iterator, keys):
     values, lengths, dense_features, labels = batched_iterator
 
