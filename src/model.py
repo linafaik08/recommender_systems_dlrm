@@ -167,7 +167,7 @@ class DLRMCustom:
                     'auc_train': round(auc_train, 4),
                     'auc_test': round(auc_val, 4)
                 }
-                if epoch > 0 and abs(scores[epoch]['auc_val'] - scores[epoch - 1]['auc_val']) < 0.001:
+                if epoch > 0 and abs(scores[epoch]['auc_test'] - scores[epoch - 1]['auc_test']) < 0.001:
                     k += 1
                 if k > e_patience:
                     print('Early stopping')
