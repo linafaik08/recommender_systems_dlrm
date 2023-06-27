@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import time
 
+from batch import *
+
 from torchrec import *
 
 import torch
@@ -109,7 +111,7 @@ class DLRMCustom:
 
         return l_labels, l_preds, np.mean(losses), auc
 
-    def train(self, train_data, nb_batches=None):
+    def train(self, train_data, nb_batches):
 
         self.train_model.train()
         self.optimizer.zero_grad()
@@ -141,7 +143,7 @@ class DLRMCustom:
 
         return l_labels, l_preds, np.mean(losses), auc
 
-    def train_test(self, train_data, val_data, n_epochs, e_patience, nb_batches):
+    def train_test(self, train_data, val_data, n_epochs, e_patience, nb_batches = None):
         pbar = tqdm(range(n_epochs))
         k = 0
         scores = {}
