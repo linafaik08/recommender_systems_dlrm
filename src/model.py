@@ -248,10 +248,10 @@ def plot_results(results):
     fig = make_subplots(specs=[[{"secondary_y": True}]])
     # Add training and validation loss traces to the figure
     fig.add_trace(go.Scatter(x=results.epoch, y=results.loss_train, name="loss_train"), secondary_y=False)
-    fig.add_trace(go.Scatter(x=results.epoch, y=results.loss_val, name="loss_test"), secondary_y=False)
+    fig.add_trace(go.Scatter(x=results.epoch, y=results.loss_test, name="loss_test"), secondary_y=False)
     # Add training and validation AUC traces to the figure
     fig.add_trace(go.Scatter(x=results.epoch, y=results.auc_train, name="auc_train"), secondary_y=True)
-    fig.add_trace(go.Scatter(x=results.epoch, y=results.auc_val, name="auc_test"), secondary_y=True)
+    fig.add_trace(go.Scatter(x=results.epoch, y=results.auc_test, name="auc_test"), secondary_y=True)
     # Update x-axis and y-axes titles
     fig.update_xaxes(title_text="epoch")
     fig.update_yaxes(title_text="loss", secondary_y=False)

@@ -6,7 +6,8 @@
 
 ## Objective
 
-This repository contains the code and notebooks used to train survival models to tackle real-world predictive problems. It was developed as an experimentation project to support the explanation blog posts around survival models. For more information, you can find the articles here:
+This repository contains the code and the notebook used to train a DLMR model using PyTorch library, [torchrec](https://pytorch.org/torchrec/).
+It was developed as an experimentation project to support the explanation blog posts around survival models. For more information, you can find the articles here:
 
 1. [Part I - Survival Analysis: Predict Time-To-Event With Machine Learning](https://towardsdatascience.com/survival-analysis-predict-time-to-event-with-machine-learning-part-i-ba52f9ab9a46)
 
