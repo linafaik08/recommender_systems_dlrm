@@ -47,6 +47,10 @@ class DLRMCustom:
         self.build_model()
 
     def build_model(self):
+        """
+        Build a model and initializing related components.
+        :return: None
+        """
         eb_configs = [
             EmbeddingBagConfig(
                 name=f"t_{feature_name}",
