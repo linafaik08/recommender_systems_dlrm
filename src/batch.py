@@ -36,7 +36,8 @@ class RecBatch:
             n = self.data.shape[0] // self.batch_size
             r = self.data.shape[0] % self.batch_size
             index = list(np.array(self.data.index[:n * self.batch_size]).reshape(-1, self.data.shape[0] // n))
-            index.append(self.data.index[n * self.batch_size: n * self.batch_size + r])
+            if r > 0:
+                index.append(self.data.index[n * self.batch_size: n * self.batch_size + r])
             self.num_generated_batches = len(index)
         else:
             np.random.seed(seed=seed)
@@ -53,7 +54,6 @@ class RecBatch:
         sample = self.data.iloc[self.index[i]].copy().reset_index(drop=True)
 
         values = sample[self.cols_sparse].sum(axis=0).sum(axis=0)
-        print("values", values)
         values = torch.tensor([k for k in values if k != '']).to(self.device)
 
         lengths = torch.tensor(
