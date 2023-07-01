@@ -6,10 +6,11 @@
 
 ## Objective
 
-This repository contains the code and the notebook used to train a DLMR model using PyTorch library, [torchrec](https://pytorch.org/torchrec/).
+This repository contains the code and the notebook used to train a DLRM model using PyTorch library, [torchrec](https://pytorch.org/torchrec/).
 It was developed as an experimentation project to support the explanation blog posts around the topic. 
 
-For more information, you can find the article here: 
+This repository contains the code and notebook used to train a DLRM model using the PyTorch library, [torchrec](https://pytorch.org/torchrec/). 
+The model and code are explained in more detail in the following article:
 - Building Powerful Recommender Systems with Deep Learning  
 _A Step-by-Step Implementation Using the PyTorch Library TorchRec (link coming soon)_
 
@@ -29,8 +30,7 @@ src
 ### Data
 
 The notebook is based on synthetic data. 
-It can easily be adapted to other data sets. 
-They must have categorical and continuous variables and a target column to predict.
+It can easily be adapted to any other data set with categorical and continuous variables and a binary target to predict.
 
 ## How to Use This Repository?
 
