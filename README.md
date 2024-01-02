@@ -12,7 +12,7 @@ It was developed as an experimentation project to support the explanation blog p
 This repository contains the code and notebook used to train a DLRM model using the PyTorch library, [torchrec](https://pytorch.org/torchrec/). 
 The model and code are explained in more detail in the following article:
 - [Building Powerful Recommender Systems with Deep Learning  
-_A Step-by-Step Implementation Using the PyTorch Library TorchRec](https://towardsdatascience.com/building-powerful-recommender-systems-with-deep-learning-d8a919c52119)_
+_A Step-by-Step Implementation Using the PyTorch Library TorchRec_](https://towardsdatascience.com/building-powerful-recommender-systems-with-deep-learning-d8a919c52119)
 
 <div class="alert alert-block alert-info"> You can find all my technical blog posts <a href = https://linafaik.medium.com/>here</a>. </div>
 
